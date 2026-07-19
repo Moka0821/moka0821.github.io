@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Moka 的个人主页">
+  <title>Moka | 个人主页</title>
+  <style>
+    :root { --blue:#65b8df; --deep:#27657f; --pale:#eefaff; --white:#fff; --text:#244452; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Arial,"Microsoft YaHei",sans-serif; color:var(--text); background:linear-gradient(145deg,#eaf9ff,#f8fdff); line-height:1.7; }
+    nav { position:sticky; top:0; z-index:10; display:flex; justify-content:space-between; align-items:center; padding:16px 8%; background:rgba(255,255,255,.88); backdrop-filter:blur(12px); box-shadow:0 2px 16px rgba(39,101,127,.08); }
+    nav strong { color:var(--deep); font-size:21px; }
+    nav a { color:var(--deep); text-decoration:none; margin-left:20px; font-size:14px; }
+    .hero { min-height:78vh; padding:90px 8% 70px; display:grid; grid-template-columns:1.2fr .8fr; gap:45px; align-items:center; overflow:hidden; }
+    .tag { display:inline-block; padding:7px 15px; border-radius:20px; background:#d8f3ff; color:var(--deep); font-weight:bold; font-size:14px; }
+    h1 { margin:18px 0 8px; color:var(--deep); font-size:clamp(46px,8vw,82px); line-height:1.05; }
+    .intro { max-width:620px; font-size:19px; }
+    .button { display:inline-block; margin-top:20px; padding:12px 22px; color:white; background:var(--blue); border-radius:28px; text-decoration:none; box-shadow:0 8px 24px rgba(101,184,223,.35); }
+    .art { position:relative; height:380px; }
+    .circle { position:absolute; border-radius:50%; }
+    .c1 { width:290px; height:290px; right:20px; top:30px; background:linear-gradient(145deg,#90d5f3,#d8f3ff); box-shadow:0 20px 60px rgba(54,137,174,.22); }
+    .c2 { width:125px; height:125px; right:250px; top:210px; background:#fff; border:16px solid #b9e8fa; }
+    .flower { position:absolute; right:84px; top:98px; font-size:120px; filter:drop-shadow(0 10px 12px rgba(39,101,127,.18)); }
+    section { padding:74px 8%; }
+    h2 { margin:0 0 28px; color:var(--deep); font-size:34px; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .card { padding:26px; background:rgba(255,255,255,.92); border:1px solid #d8f2fc; border-radius:20px; box-shadow:0 10px 35px rgba(39,101,127,.08); }
+    .icon { font-size:30px; }
+    .card h3 { color:var(--deep); margin:12px 0 6px; }
+    .contact { text-align:center; background:#dff5ff; }
+    footer { padding:26px; text-align:center; color:#59808f; font-size:14px; }
+    @media (max-width:760px) { nav a { display:none; } .hero { grid-template-columns:1fr; padding-top:65px; } .art { height:300px; } .cards { grid-template-columns:1fr; } .c1 { width:240px; height:240px; } .flower { right:68px; top:76px; font-size:100px; } }
+  </style>
+</head>
+<body>
+  <nav><strong>MOKA</strong><div><a href="#about">关于我</a><a href="#experience">我的经历</a><a href="#contact">联系我</a></div></nav>
+  <header class="hero">
+    <div><span class="tag">Malaysia · Singapore</span><h1>Hello, I'm Moka.</h1><p class="intro">欢迎来到我的个人主页。我目前经营一家全球批发商店，喜欢把创意、审美与商业连接在一起。</p><a class="button" href="#about">认识我 ↓</a></div>
+    <div class="art" aria-hidden="true"><div class="circle c1"></div><div class="circle c2"></div><div class="flower">🌷</div></div>
+  </header>
+  <main>
+    <section id="about"><h2>关于我</h2><div class="cards"><article class="card"><div class="icon">📍</div><h3>居住地</h3><p>来自马来西亚，目前生活于马来西亚与新加坡。</p></article><article class="card"><div class="icon">🛍️</div><h3>目前工作</h3><p>经营一家面向全球客户的批发商店。</p></article><article class="card"><div class="icon">🎓</div><h3>教育经历</h3><p>毕业于马来西亚泰莱大学。</p></article></div></section>
+    <section id="experience"><h2>我的经历</h2><div class="card"><div class="icon">💐</div><h3>花店创业经历</h3><p>我曾经和朋友一起经营一家花店。这段经历让我学会了用心理解顾客、用美感表达情绪，也培养了我对经营和服务的热情。</p></div></section>
+    <section id="contact" class="contact"><h2>联系我</h2><p>很高兴认识你，欢迎与我交流。</p><a class="button" href="tel:81501641">📞 81501641</a></section>
+  </main>
+  <footer>© <span id="year"></span> Moka. All rights reserved.</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
